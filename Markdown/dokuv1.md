@@ -77,6 +77,6 @@ Zum löschen folgendes:
 
 <img src="Git_Data_Transport_Commands.png" alt="drawing" width="400"/>
 
-Hier noch eine Grafik zum Git:
+Hier noch eine Grafik zum Git
 
 
