@@ -1,8 +1,15 @@
+import sys
 from yahoo_fin import stock_info as si
 
-price = si.get_live_price("amc")
-price_str = str(price)
-file = "E:/Users/chris/Schule/Modul_300/M300/lb2/Website/marketprice.txt"
+stock = str(sys.argv[1])
 
-with open(file, 'w') as fileowrite:
+price = si.get_live_price(stock)
+price_str = str(price)
+file_price = "E:/Users/chris/Schule/Modul_300/M300/lb2/Website/marketprice.txt"
+file_stock = "E:/Users/chris/Schule/Modul_300/M300/lb2/Website/marketstock.txt"
+
+with open(file_price, 'w') as fileowrite:
         fileowrite.write(price_str+"<br>")
+
+with open(file_stock, 'w') as fileowrite:
+        fileowrite.write(stock+"<br>")

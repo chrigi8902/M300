@@ -27,17 +27,16 @@
             <div class="mbr-box mbr-box--stretched"><div class="mbr-box__magnet mbr-box__magnet--center-left">
                 <div class="row"><div class=" col-sm-6 col-sm-offset-6">
                     <div class="mbr-hero animated fadeInUp">
-                        <h1 class="mbr-hero__text">
-                        <?php    
-                        echo file_get_contents( "marketprice.txt" );
-
-                        ?> 
-
-                        </h1>
+                        <h1 class="mbr-hero__text">Prices for Stocks</h1>
                         <p class="mbr-hero__subtext">
                         
                         <?php
-                        pre_r($_POST);
+                        $valor = $_POST['stock'];
+                        $valor_py = file_get_contents( "marketstock.txt" );
+                        $price = exec("python stockmarket.py $valor 2<&1");
+                        $valor_py = file_get_contents( "marketstock.txt" );
+                        $price_py = file_get_contents( "marketprice.txt" );
+                        echo "Price for: " .$valor_py ."is: " .$price_py ;
                         ?>
                         <form action="" method="Post">
                         <label for="stock">Stock</label><br>
@@ -48,10 +47,9 @@
                         <br>
                         <?php 
                         function pre_r( $array ){
-                            #echo '<pre>';
-                            print_r($_POST['stock']);
-                            #echo '</pre>';
-
+                            $valor = $_POST['stock'];
+                            $price = exec("python stockmarket.py $valor 2<&1");
+                            sleep (5);
                         }
 
                         ?></p>
@@ -61,7 +59,6 @@
         </div>
         <div class="mbr-arrow mbr-arrow--floating text-center">
             <div class="mbr-section__container container">
-                <a class="mbr-arrow__link" href="#next"><i class="glyphicon glyphicon-menu-down"></i></a>
             </div>
         </div>
     </div>
@@ -74,9 +71,7 @@
   <script src="assets/jarallax/jarallax.js"></script>
   <script src="assets/mobirise/js/script.js"></script>
   
-  
 
-?>
 
 </body>
 </html>
