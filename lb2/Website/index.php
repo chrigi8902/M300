@@ -35,15 +35,27 @@
 
                         </h1>
                         <p class="mbr-hero__subtext">
-                        <form>
+                        
+                        <?php
+                        pre_r($_POST);
+                        ?>
+                        <form action="" method="Post">
                         <label for="stock">Stock</label><br>
-                        <input type="text" id="stock" name="stock"><br>
-                        <input type="submit">
+                        <input type="text" name="stock" value="" style="background-color:grey"><br><br>
+                        <input type="submit" name="submit" value="Submit" style="background-color:grey; height:2em; width:5em">
                         </form>    
                         
-                        <br> <?php echo htmlspecialchars($_POST['name']); ?></p>
+                        <br>
+                        <?php 
+                        function pre_r( $array ){
+                            #echo '<pre>';
+                            print_r($_POST['stock']);
+                            #echo '</pre>';
+
+                        }
+
+                        ?></p>
                     </div>
-                    <div class="mbr-buttons btn-inverse mbr-buttons--left"><a class="mbr-buttons__btn btn btn-lg btn-danger animated fadeInUp delay" href="https://mobirise.com">DOWNLOAD NOW</a> <a class="mbr-buttons__btn btn btn-lg btn-default animated fadeInUp delay" href="https://mobirise.com">LEARN MORE</a></div>
                 </div></div>
             </div></div>
         </div>
