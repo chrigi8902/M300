@@ -17,11 +17,22 @@ In diesem Cheatsheet werde ich wichtige Git commands behandeln welche ich im Mod
 
 Mit diesen Commands kann Git zeigen, wer man ist und mehr Infos zum "Author" geben
 
-> git config --global user.name "Christian Schnittert"
+    git config --global user.name "Christian Schnittert"
 
-> git config --global user.email "christian2424@outlook.de"
+    git config --global user.email "christian2424@outlook.de"
 
-Für locale Repositorys gibt es verschiedene Commands:
+Um ein Repository überhaupt zu erstellen kann man mit folgenden Commands ein Repo erstellen oder clonen
 
-> git init
+    git init
+    git clone /pfad/zum/repository
+    git clone username@host:/pfad/zum/repository
 
+Um Neuerungen hochzuladen muss man zuerst die Dateien "Adden" um sie anschliessend zu commiten
+
+    git add <filename>
+    git add *
+
+    git commit -m "Commit Nachricht"
+    git commit -a  (Es wird alles commited)
+
+    git push
