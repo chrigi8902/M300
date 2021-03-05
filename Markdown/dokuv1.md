@@ -52,12 +52,28 @@ Um bestimte Dateien zu Löschen / Verschieben kann man sie mit folgenden Command
     git rm /pfad/zur/datei
     git mv /pfad/zur/datei
 
+Um einen neuen Branch zu erstellen kann man folgende Befehle verwenden:
+
+    git checkout -b <branchname>
+
+    git checkout <branchname>
+
+    git branch
+
+Um von einem Branch zum anderen zu kopieren folgendes ausführen:
+
+    git merge branch_B
+
+Zum löschen folgendes:
+
+    git branch -d <branchname>
+
+   
 
 ## Aufbau
 
-Hier noch eine Grafik zum Git:
-
 <img src="Git_Data_Transport_Commands.png" alt="drawing" width="400"/>
 
+Hier noch eine Grafik zum Git:
 
 
