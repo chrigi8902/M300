@@ -7,6 +7,7 @@
   - [Commands](#commands)
     - [Generel](#generel)
     - [Überschreiben / Hinzufügen / Bearbeiten](#überschreiben--hinzufügen--bearbeiten)
+    - [Branches](#branches)
   - [Aufbau](#aufbau)
 
 # Github Cheatsheet
@@ -51,6 +52,8 @@ Um bestimte Dateien zu Löschen / Verschieben kann man sie mit folgenden Command
 
     git rm /pfad/zur/datei
     git mv /pfad/zur/datei
+
+### Branches
 
 Um einen neuen Branch zu erstellen kann man folgende Befehle verwenden:
 
